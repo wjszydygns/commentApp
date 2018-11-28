@@ -1,0 +1,56 @@
+*{
+  margin: 0px;
+  padding:0px
+}
+
+.addDiv{
+  display: flex;
+  justify-items: left;
+  justify-content: left;
+  flex-direction: column; 
+
+}
+.content{
+  width:350px;
+  margin-top: 10px;
+}
+.label{
+  display: block;
+  margin:10px 0;
+
+}
+.item{
+  margin:10px 55px;
+
+}
+.bordered{
+  border: 1px solid rgb(169, 169, 169);
+  width:500px;
+  position: relative;
+  height:80px;
+}
+.delete{
+position:absolute;
+right:10px;
+top:0px;
+
+}
+.appRow{
+  display: flex;
+  justify-content: center
+
+
+}
+.header{
+  height:180px;
+  width: 100%;
+  background: lightgray;
+  position: relative;
+
+}
+.head{
+
+  position: absolute;
+  top:70px;
+  left:200px;
+}
