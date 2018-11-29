@@ -7,8 +7,7 @@ export default class ComentItem extends React.Component{
    //给组件类添加指定属性
    static propTypes={
        coment:PropTypes.object.isRequired,
-       delete:PropTypes.func.isRequired,
-       index:PropTypes.number.isRequired
+       
    }
 
     constructor(props)
@@ -19,23 +18,23 @@ export default class ComentItem extends React.Component{
         }
     }
 
-    delete=()=>{
-       const {index,coment}=this.props;
-       if(window.confirm(`确定要删除${coment.username}的评论吗？`))
-       {
-         this.props.delete(index);
-       }
-      
+    delete=(e,key)=>{
+        console.log(e)
+        console.log(key);
+
+
+
     }
     render(){
-        const {coment}=this.props;
+        const {coment,key}=this.props;
+        console.log(key);
         return(
          <div className="bordered">
            <label htmlFor="content">{coment.username}说：</label>
            <p className="item">{coment.content}</p>
            <Button className="delete" 
            　　　　　icon="delete" type="primary"
-           　　　　　onClick={this.delete}　>删除</Button>
+           　　　　　onClick={(e,key)=>this.delete(e,key)}　>删除</Button>
         </div>
         );
     }

@@ -35,6 +35,7 @@ export default class ComentAdd extends React.Component {
        })
 
     }
+
     render() {
         const { TextArea } = Input
         const { username, content } = this.state;
@@ -47,7 +48,7 @@ export default class ComentAdd extends React.Component {
                     className="content"
                     value={username}
                     onChange={(e) => {
-                        // console.log(e);
+                        console.log(e);
                         this.setState({ username: e.target.value })
                     }} />
                 <label className="label" htmlFor="content">评论内容：</label>
@@ -60,4 +61,10 @@ export default class ComentAdd extends React.Component {
 
         );
     }
+
+
+
+
+
+
 }

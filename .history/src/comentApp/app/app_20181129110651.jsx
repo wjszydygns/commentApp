@@ -5,15 +5,14 @@ import { Row, Col } from "antd"
 import "../../index.css"
 
 export default class App extends React.Component {
-    // constructor(props) {
-    //     super(props)
-    //     this.state = {
+    constructor(props) {
+        super(props)
+        this.state = {
             
 
-    //     }
+        }
 
-    // }
-    //给组件类添加自定义state属性，并且这个state 也就是this.state
+    }
     state={
        coments: [
                 { username: "michell", content: "react太难了" },
@@ -23,24 +22,6 @@ export default class App extends React.Component {
                 { username: "mike", content: "react太难了" },
             ],
     }
-     //添加评论
-     addComent=(item)=>{
-       
-       let comentList=this.state.coments;
-       comentList.unshift(item);
-       this.setState({
-        coments:comentList
-       })     
-
-     }
-     //删除指定评论
-     delete=(index)=>{
-       const {coments}=this.state;
-       coments.splice(index,1);
-       this.setState({
-           coments
-       })
-     }
     render() {
         return (
             <div>
@@ -51,12 +32,26 @@ export default class App extends React.Component {
 
                 <Row className="appRow" justify="center" gutter={20}>
                     <Col xs={10} sm={10} md={10} lg={10} xl={10}>
-                        <ComentAdd  coments={this.state.coments}  addComent={this.addComent}/>
+                        <ComentAdd />
                     </Col>
                     <Col xs={10} sm={10} md={10} lg={10} xl={10}>
-                        <ComentList coments={this.state.coments}  delete={this.delete}/>
+                        <ComentList coments={this.state.coments}/>
                     </Col>
                 </Row>
 
+
+
+
             </div>
-        );}}
+        );
+
+
+    }
+
+
+
+
+
+
+
+}

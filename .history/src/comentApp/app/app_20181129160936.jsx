@@ -23,23 +23,14 @@ export default class App extends React.Component {
                 { username: "mike", content: "react太难了" },
             ],
     }
-     //添加评论
-     addComent=(item)=>{
-       
-       let comentList=this.state.coments;
-       comentList.unshift(item);
-       this.setState({
-        coments:comentList
-       })     
 
-     }
-     //删除指定评论
-     delete=(index)=>{
-       const {coments}=this.state;
-       coments.splice(index,1);
-       this.setState({
-           coments
-       })
+     addComent=()=>{
+
+
+
+
+
+
      }
     render() {
         return (
@@ -54,9 +45,23 @@ export default class App extends React.Component {
                         <ComentAdd  coments={this.state.coments}  addComent={this.addComent}/>
                     </Col>
                     <Col xs={10} sm={10} md={10} lg={10} xl={10}>
-                        <ComentList coments={this.state.coments}  delete={this.delete}/>
+                        <ComentList coments={this.state.coments}/>
                     </Col>
                 </Row>
 
+
+
+
             </div>
-        );}}
+        );
+
+
+    }
+
+
+
+
+
+
+
+}

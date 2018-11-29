@@ -35,6 +35,7 @@ export default class ComentAdd extends React.Component {
        })
 
     }
+
     render() {
         const { TextArea } = Input
         const { username, content } = this.state;
@@ -60,4 +61,10 @@ export default class ComentAdd extends React.Component {
 
         );
     }
+
+
+
+
+
+
 }

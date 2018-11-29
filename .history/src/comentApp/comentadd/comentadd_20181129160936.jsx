@@ -7,37 +7,29 @@ export default class ComentAdd extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            username: "mihcell",
+            name: "mihcell",
             content: "react比较复杂",
 
         }
     }
     static propTypes = {
-        coments: PropTypes.array.isRequired,
-        addComent:PropTypes.func.isRequired
+        coments: PropTypes.array.isRequired
+        addComent:PropTypes.func.isRequired;
 
     }
 
     add=()=>{
        const {name,content}=this.state;
-       const {addComent}=this.props;
-    //    let item={
-    //        username:name,
-    //        content:content       
-    //    }省代码的写法
-       let item=this.state;
-       addComent(item);
-       //清除输入数据
-       this.setState({
-           username:"",
-           content:"",
 
-       })
+
+
+
 
     }
+
     render() {
         const { TextArea } = Input
-        const { username, content } = this.state;
+        const { name, content } = this.state;
         const { coments} = this.props;
         return (
             <div className="addDiv">
@@ -45,10 +37,10 @@ export default class ComentAdd extends React.Component {
                 <Input id="name"
                     style={{ height: 20 }}
                     className="content"
-                    value={username}
+                    value={name}
                     onChange={(e) => {
-                        // console.log(e);
-                        this.setState({ username: e.target.value })
+                        console.log(e);
+                        this.setState({ name: e.target.value })
                     }} />
                 <label className="label" htmlFor="content">评论内容：</label>
                 <TextArea id=" content"
@@ -60,4 +52,10 @@ export default class ComentAdd extends React.Component {
 
         );
     }
+
+
+
+
+
+
 }

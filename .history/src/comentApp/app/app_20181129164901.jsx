@@ -23,7 +23,7 @@ export default class App extends React.Component {
                 { username: "mike", content: "react太难了" },
             ],
     }
-     //添加评论
+
      addComent=(item)=>{
        
        let comentList=this.state.coments;
@@ -33,7 +33,6 @@ export default class App extends React.Component {
        })     
 
      }
-     //删除指定评论
      delete=(index)=>{
        const {coments}=this.state;
        coments.splice(index,1);
@@ -58,5 +57,19 @@ export default class App extends React.Component {
                     </Col>
                 </Row>
 
+
+
+
             </div>
-        );}}
+        );
+
+
+    }
+
+
+
+
+
+
+
+}
