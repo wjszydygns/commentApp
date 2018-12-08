@@ -53,4 +53,35 @@ top:0px;
   position: absolute;
   top:70px;
   left:480px;
+
+}
+
+.SearchTop{
+  margin: 0 200px;
+  padding-top: 50px;
+  padding-left: 50px;
+  height:100px;
+  width:900px;
+ 
+  background: lightgray;
+
+}
+.ant-card {
+  width:300px;
+  height:150px;
+  border: 1px solid black;
+  display: inline-block !important;
+}
+.ant-list-item{
+  display: inline-block !important;
+}
+.ant-col-8{
+   display: inline-block !important;
+}
+.SearchDisplay{
+  margin-left: 220px;
+  margin-top:10px;
+
+
+
 }
