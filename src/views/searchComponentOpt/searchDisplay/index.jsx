@@ -1,6 +1,6 @@
 import React from "react"
 import { List, Card } from "antd"
-import "../../index.css"
+import "../../../index.css"
 import axios from "axios"
 import PubSub from "pubsub-js"
 

@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import "../../index.css"
+import "../../../index.css"
 import { Input, Row, Col, Button } from "antd"
 import PropTypes from "prop-types"
 

@@ -2,11 +2,11 @@ import React, { Component } from "react"
 import ComentList from "../comentlist/comentlist"
 import ComentAdd from "../comentadd/comentadd"
 import { Row, Col } from "antd"
-import "../../index.css"
+import "../../../index.css"
 import axios from "axios"
 import PubSub from "pubsub-js"
 
-export default class App extends React.Component {
+export default class ComentApp extends React.Component {
     // constructor(props) {
     //     super(props)
     //     this.state = {

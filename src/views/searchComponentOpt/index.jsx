@@ -8,8 +8,6 @@ export default class SearchOpt extends React.Component
      super(props)
      this.state = {
        
-
-
      }
  }
 //组件优化：采用发布订阅模式来进行兄弟组件之间的通信，不用父组件来当中间方，可以直接通信
@@ -25,9 +23,4 @@ export default class SearchOpt extends React.Component
 
     )
  }
-
-
-
-
-    
 }

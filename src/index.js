@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from  "./comentAppOpt/app/app"
+import App from  "./views/app"
 import * as serviceWorker from './serviceWorker';
-import Search from "./searchComponent/index"
-import SearchOpt from "./searchComponentOpt/index"
+import  {BrowserRouter}  from "react-router-dom"
+//import Search from "./searchComponent/index"
+//import SearchOpt from "./searchComponentOpt/index"
 
-ReactDOM.render(<App/>, document.getElementById('root'));
-ReactDOM.render(<SearchOpt/>, document.getElementById('root'));
+ReactDOM.render(
+    (
+    <BrowserRouter>
+     <App/>
+    </BrowserRouter>
+    ),
+ document.getElementById('root'));
+
 
 
 serviceWorker.unregister();

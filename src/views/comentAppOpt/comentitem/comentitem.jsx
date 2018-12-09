@@ -1,5 +1,5 @@
 import React,{Component} from "react"
-import "../../index.css"
+import "../../../index.css"
 import {Button,Icon} from "antd"
 import PropTypes from "prop-types"; 
 import PubSub from "pubsub-js"
